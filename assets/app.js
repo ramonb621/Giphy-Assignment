@@ -1,26 +1,31 @@
+$(document).ready(function(){
 var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + vocations + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 
 var vocations = ["cop", "nurse", "doctor", "plumber"];
   
-
     $.ajax({
       url: queryURL,
       method: "GET"
     })
-      .then(function(data){
-      
-        console.log(data);
+      .then(function(response){
+        var imageObjArr = response.data[0];
+        for(var j = 0; j < imageObjArr.length; j++){
+          imageLink = imageObjArr.length[j];
+          console.log(response);
+        }
 
         var newSearchDiv = $("<div class='vocation'>");
-        var rating = data.rating;
+        var rating = imageObjArr.rating;
         var pRating = $("<p>").text("Rating: " + rating);
         newSearchDiv.append(pRating);
 
-        var imageURL = data.url;
+        var imageURL = imageObjArr.images.fixed_height.url;
         var image = $("<img>").attr("src", imageURL);
         newSearchDiv.append(image);
+        console.log(imageURL)
 
         $("#gifs-display").prepend(newSearchDiv);
+        renderButtons();
       })
   
 
@@ -43,12 +48,10 @@ var vocations = ["cop", "nurse", "doctor", "plumber"];
         vocations.push(vocation);
         renderButtons();
       })
-      // $(document).on("click", ".vocation-btn", renderButtons);
-      renderButtons();
 
 
   // STOP & START
-    $(".gif").on("click", function() {
+    $(".vocation").on("click", function() {
 
     var state = $(this).attr("data-state");
 
@@ -64,4 +67,5 @@ var vocations = ["cop", "nurse", "doctor", "plumber"];
       $(this).attr("data-state", "still");
     }
   
-  });
+  })
+})
