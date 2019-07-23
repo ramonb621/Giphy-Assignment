@@ -13,7 +13,8 @@ body{
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 16pt;
     margin:0 10px;
+    border-radius: 25px;
 }
 .gif{
-    border: solid white;
+    border: solid 2px white;
 }
