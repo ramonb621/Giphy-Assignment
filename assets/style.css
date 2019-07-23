@@ -18,3 +18,8 @@ body{
 .gif{
     border: solid 2px white;
 }
+.btn:hover, #add-search:hover{
+    background-color: whitesmoke;
+    color: black;
+    font-weight: bold;
+}

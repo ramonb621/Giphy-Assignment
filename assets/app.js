@@ -1,5 +1,5 @@
 
-var vocations = ["happy", "fighter pilot", "cowboy monkey", "grumpy"];
+var vocations = ["happy", "fighter pilot", "cowboy monkey", "power ranger"];
 var search = "";
 var a;
 
