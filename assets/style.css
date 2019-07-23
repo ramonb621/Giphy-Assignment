@@ -1,0 +1,19 @@
+/* font-family: 'Darker Grotesque', sans-serif;
+font-family: 'Londrina Shadow', cursive; */
+body{
+    background-color: black;
+    color: royalblue;
+    text-align: center;
+    font-family: 'Londrina Shadow', cursive;
+    font-size: 20pt;
+}
+.btn, #add-search{
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 16pt;
+    margin:0 10px;
+}
+.gif{
+    border: solid white;
+}
