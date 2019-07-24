@@ -24,7 +24,8 @@ body{
     font-weight: bold;
 }
 input[type=text]{
-    background-color: royalblue;
+    background-color: goldenrod;
+    border-radius: 15px;
     color: black;
     font-family: 'Darker Grotesque', sans-serif;
     font-size:16pt;
