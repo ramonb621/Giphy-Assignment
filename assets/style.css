@@ -23,3 +23,10 @@ body{
     color: black;
     font-weight: bold;
 }
+input[type=text]{
+    background-color: royalblue;
+    color: black;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size:16pt;
+    font-weight: bold;
+}
