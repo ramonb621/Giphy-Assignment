@@ -13,7 +13,6 @@ $("#buttons").on("click", ".btn", function(){
       method: "GET"
     })
       .then(function(response){
-        // console.log(response);
 
         var imageObjArr = response.data;
         for(var i = 0; i < imageObjArr.length; i++){
@@ -47,21 +46,6 @@ $("#buttons").on("click", ".btn", function(){
           $("#buttons").append(a);
       }
   }
-  //     $("#add-search").on("click", function(event){
-  //       event.preventDefault();
-
-  //       var vocation = $("#search-input").val().trim();
-  //       vocations.push(vocation);
-  //       renderButtons();
-  //     })
-  //     function buttonSearch(){
-  //       $(".vocation-btn").on("click",function(event){
-  //         queryURL;
-  //         newSearchDiv.append(image);
-  //         newSearchDiv.append(pRating);
-  //       })
-  //     }
-  //     console.log();
 
   // STOP & START
   $("#gifs-display").on("click", ".gif", function(event){
